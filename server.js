@@ -15,7 +15,7 @@ app.use(parser.json());
 app.use(express.static("public"));
 // app.use(routes);
 require("./routes/html-routes.js")(app);
-// require("./routes/api-routes.js")(app);
+require("./routes/api-routes.js")(app);
 
 
 
