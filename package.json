@@ -1,0 +1,25 @@
+{
+  "name": "remind-me",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/khashinik/remind-me.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/khashinik/remind-me/issues"
+  },
+  "homepage": "https://github.com/khashinik/remind-me#readme",
+  "dependencies": {
+    "moment": "^2.22.2",
+    "twilio": "^3.18.0"
+  }
+}
