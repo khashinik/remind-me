@@ -1,0 +1,36 @@
+body{
+    /*background-image: url("..css\images\alarms.jpg");*/
+    background-color: rgb(94, 118, 250);
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+}
+
+#button{
+        background-color: white; 
+        color: rgb(45, 23, 248); 
+        border: 2px solid rgb(49, 9, 230);
+    }
+    
+#button:hover{
+        background-color: rgb(138, 198, 255);
+        color: white;
+    }
+
+iframe {
+    width: 100%;
+    border-width: 0px;
+/*animation-name: ;
+    animation-duration: 5s;
+    */
+}
+
+.parent {
+    position: relative;
+}
+
+.collapsible li.active span {
+    -ms-transform: rotate(180deg); /* IE 9 */
+    -webkit-transform: rotate(180deg); /* Chrome, Safari, Opera */
+    transform: rotate(180deg);
+  }
