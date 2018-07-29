@@ -10,19 +10,28 @@ module.exports = function (app) {
 
     app.use(passport.initialize());
     
-    app.get('/auth/google', passport.authenticate('google', {
-        scope: ['profile', 'email']
-    }));
+    // app.get('/auth/google', passport.authenticate('google', {
+    //     scope: ['profile', 'email']
+    // }));
 
-    app.get('/auth/google/callback',
-        passport.authenticate('google', {
-            successRedirect : '../public/authenticated.html',
-            failureRedirect: '/'
-        }),
-        (req, res) => {
-            res.sendFile(path.join(__dirname, "../public/authenticated.html"));
-        }
-    );
+    // app.get('/auth/google/callback',
+    //     passport.authenticate('google', {
+    //         successRedirect : '../public/authenticated.html',
+    //         failureRedirect: '/'
+    //     }),
+    //     (req, res) => {
+    //         res.sendFile(path.join(__dirname, "../public/authenticated.html"));
+    //     }
+    // );
+app.get('/auth/google',
+  passport.authenticate('google', { scope: ['profile'] }));
+
+app.get('/auth/google/callback', 
+  passport.authenticate('google', { failureRedirect: '/login' }),
+  function(req, res) {
+    // Successful authentication, redirect home.
+    res.redirect('../public/authenticated.html');
+  });
 
 
 

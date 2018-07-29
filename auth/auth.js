@@ -1,4 +1,4 @@
-const GoogleStrategy = require('passport-google-oauth').OAuth2Strategy;
+var GoogleStrategy = require('passport-google-oauth20').Strategy;
 const keys = require('../keys.js');
 
 module.exports = (passport) => {
@@ -11,7 +11,7 @@ module.exports = (passport) => {
     passport.use(new GoogleStrategy({
             clientID: keys.google.client_ID,
             clientSecret: keys.google.clientSecret,
-            callbackURL: keys.google.callBackURL,
+            callbackURL: "http://localhost:3000/auth/google/callback",
             
         },
         (token, refreshToken, profile, done) => {
@@ -20,4 +20,17 @@ module.exports = (passport) => {
                 token: token
             });
         }));
+    // var GoogleStrategy = require('passport-google-oauth20').Strategy;
+
+// passport.use(new GoogleStrategy({
+//     clientID: keys.google.client_ID,
+//     clientSecret: keys.google.clientSecret,
+//     callbackURL: "http://localhost:3000/auth/google/callback"
+//   },
+//   function(accessToken, refreshToken, profile, cb) {
+//     User.findOrCreate({ googleId: profile.id }, function (err, user) {
+//       return cb(err, user);
+//     });
+//   }
+// ));
 };
