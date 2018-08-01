@@ -12,13 +12,15 @@
 
     <!-- Moment.js -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.16.0/moment.min.js"></script>
-
+    <script type="text/javascript" src="/js/app.js" defer></script>
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Shrikhand" rel="stylesheet">
+    <meta name="google-signin-client_id" content="747948799450-ebtaufpqbjd3hl7lqpfdq9p792m7cbuc.apps.googleusercontent.com">
+    <script src="https://apis.google.com/js/platform.js?onload=renderButton" async defer></script>
 
     <!-- CSS -->
     <link rel="stylesheet" type="text/css" href="css/style.css">
-    <script type="text/javascript" src="/js/app.js" defer></script>
+    
 </head>
 <body>
     <div class="jumbotron">
@@ -26,7 +28,9 @@
       </div>
       <div class="container">
           <div class="row">
-              <button type="button" class="btn btn-primary" id="login">Login</button>
+            <div id="siginbutton"></div>
+            <div id="userinfo"></div>
+            <br/>
           </div>
       </div>
 </body>
