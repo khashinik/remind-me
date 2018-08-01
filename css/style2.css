@@ -11,22 +11,8 @@ Body{
 }
 
 .form-group{
-    padding-right: 100px;
-    padding-left: 100px; 
-}
-
-button{
-        text-align: center;
-        background-color: rgb(230, 204, 204); 
-        color: rgb(45, 23, 248); 
-        border: 20px solid rgb(49, 9, 230);
-        padding-left: 100px;
-        padding-right: 100px;
-    }
-    
-#button:hover{
-        background-color: rgb(138, 198, 255);
-        color: white;
+    padding-right: 200px;
+    padding-left: 200px; 
     }
 
 iframe {
