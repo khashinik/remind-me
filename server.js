@@ -15,20 +15,20 @@ var client = new twilio(keys.twilio.client_ID, keys.twilio.clientSecret)
 
 var timeA = moment('2018-07-28 11:09:00 AM', 'YYYY-MM-DD hh:mm:ss a')
 
-// var tmr = setInterval(()=>{
-//   var now = moment().unix();
-//   var then = timeA.unix();
-//   console.log(now, then)
-//   if (now == then) {
-//     client.messages.create({
-//         to: '',
-//         from: '16474902662',
-//         body: 'The text service works!'
-//       });
-//       clearInterval(tmr);
-//       console.log('Check your text fool!');      
-//   }
-// }, 1000);
+var tmr = setInterval(()=>{
+  var now = moment().unix();
+  var then = timeA.unix();
+  console.log(now, then)
+  if (now == then) {
+    client.messages.create({
+        to: '',
+        from: '16474902662',
+        body: 'The text service works!'
+      });
+      clearInterval(tmr);
+      console.log('Check your text fool!');      
+  }
+}, 1000);
 var fromEmail = "projectremindmeservices@gmail.com";
 var fromName = "Remind Me Alert";
 var toEmail = "";
