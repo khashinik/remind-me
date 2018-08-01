@@ -9,4 +9,10 @@ exports.google = {
     callBackURL: process.env.gCBURI
 
 }
+
+exports.mailjet = {
+    publicID: process.env.MJ_APIKEY_PUBLIC,
+    secretID: process.env.MJ_APIKEY_PRIVATE
+}
+
 console.log("keys loaded");
