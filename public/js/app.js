@@ -4,11 +4,13 @@ function onSuccess(googleUser) {
     var profile = googleUser.getBasicProfile();
     var userInfoElem = document.getElementById("userinfo");
     // var token = googleUser.getAuthResponse().id_token;
+    //take this and set up a route to send this to the database.  
 
     addToElement(userInfoElem, "H2", 'User Info');
     addToElement(userInfoElem, "LI", 'ID: ' + profile.getId());
     addToElement(userInfoElem, "LI", 'Name: ' + profile.getName());
     addToElement(userInfoElem, "LI", 'eMail: ' + profile.getEmail());
+    
     // console.log(googleUser);
     $("#siginbutton").remove();
     var picture = $("<img>");
