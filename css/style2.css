@@ -2,18 +2,33 @@ h1{
     text-align: center;
 }
 
-Body{
-    background-image: url("css\images\alarms.jpg");
-    background-color: rgb(187, 240, 199);
+body{
+    font-family: "Times New Roman", Times, serif;
+    color: rgb(244, 245, 241);
+    font-size: 30px;
+    background-image: url("images/alarms.jpg");
+    background-color: rgb(175, 245, 191);
     background-repeat: no-repeat;
     background-size: cover;
     text-align: center;
 }
 
+/**/
+
 .form-group{
     padding-right: 200px;
     padding-left: 200px; 
     }
+.input-group{
+    padding-left: 200px;
+    padding-right: 200px; 
+}
+
+/*button{
+    padding-left: 250px;
+} */
+
+
 
 iframe {
     width: 100%;

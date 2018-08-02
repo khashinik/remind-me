@@ -2,8 +2,10 @@ h1{
     text-align: center;
 }
 
-Body{
-    background-image: url("css\images\alarms.jpg");
+body{
+    font-family: "Times New Roman", Times, serif;
+    color: white;
+    background-image: url("images/alarms.jpg");
     background-color: rgb(187, 240, 199);
     background-repeat: no-repeat;
     background-size: cover;
@@ -15,7 +17,7 @@ Body{
     padding-left: 100px; 
 }
 
-button{
+.button{
         text-align: center;
         background-color: rgb(230, 204, 204); 
         color: rgb(45, 23, 248); 
