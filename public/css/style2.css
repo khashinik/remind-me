@@ -13,6 +13,12 @@ body{
     text-align: center;
 }
 
+.container{
+    background-color: rgb(246, 249, 252);
+    border-color: black;
+    height: 220px;
+}
+
 /**/
 
 .form-group{
@@ -24,9 +30,9 @@ body{
     padding-right: 200px; 
 }
 
-/*button{
+button{
     padding-left: 250px;
-} */
+} 
 
 
 
