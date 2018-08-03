@@ -4,32 +4,37 @@ h1{
 
 body{
     font-family: "Times New Roman", Times, serif;
-    color: white;
+    color: rgb(244, 245, 241);
+    font-size: 30px;
     background-image: url("images/alarms.jpg");
-    background-color: rgb(187, 240, 199);
+    background-color: rgb(175, 245, 191);
     background-repeat: no-repeat;
     background-size: cover;
     text-align: center;
 }
 
+.container{
+    background-color: rgb(246, 249, 252);
+    border-color: black;
+    height: 220px;
+}
+
+/**/
+
 .form-group{
     padding-right: 200px;
     padding-left: 200px; 
+    }
+.input-group{
+    padding-left: 200px;
+    padding-right: 200px; 
 }
 
-.button{
-        text-align: center;
-        background-color: rgb(230, 204, 204); 
-        color: rgb(189, 8, 24); 
-        border: 20px solid rgb(164, 168, 170);
-        padding-left: 100px;
-        padding-right: 100px;
-    }
-    
-#button:hover{
-        background-color: rgb(138, 198, 255);
-        color: white;
-    }
+button{
+    padding-left: 250px;
+} 
+
+
 
 iframe {
     width: 100%;
