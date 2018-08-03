@@ -16,6 +16,19 @@ function onSuccess(googleUser) {
     var picture = $("<img>");
     picture.attr("src", profile.getImageUrl());
     $("#userinfo").append(picture);
+
+    $.ajax({
+        url: "/api/userpresent",
+        method: "POST",
+        data: {
+            id: profile.getId(),
+            uName: profile.getName(),
+            email: profile.getEmail(),
+            photo: profile.getImageUrl()
+        }
+    }).then(function (response){
+        console.log(response);
+    })
 }
 
 function onFailure(error) {
