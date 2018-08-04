@@ -26,7 +26,7 @@ app.post('/api/userpresent', function(req, res){
     }
   });
   // res.sendFile("doesExist");
-  res.sendFile(path.join(__dirname, "../public/Authenticated.html"));
+  res.redirect(200, "/public/record.html");
   res.end();
 
 })

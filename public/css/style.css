@@ -1,6 +1,9 @@
 h1{
     text-align: center;
 }
+#jumbo{
+    background-color: #2edfd9;
+}
 
 body{
     font-family: "Times New Roman", Times, serif;
