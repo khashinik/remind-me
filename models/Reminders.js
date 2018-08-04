@@ -43,6 +43,19 @@ var reminders = sequelize.define('reminders',{
             len: [1,50]
         }   
     }
+    // userID: {
+    //     type: DataTypes.STRING,
+    //     allowNull: false
+    // }
+
+    
 })
+reminders.associate = function(models){
+    reminders.belongsTo(models.Users, {
+        through: models.Users,
+        foreignKey: models.Users.userID
+    })
+};
+
 return reminders;
 }
