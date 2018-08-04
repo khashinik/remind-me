@@ -6,6 +6,7 @@ var express = require('express');
 var parser = require('body-parser');
 const morgan = require('morgan');
 const { OAuth2Client } = require('google-auth-library');
+var db = require('./models');
 
 var keys = require('./keys.js');
 
@@ -21,7 +22,7 @@ app.use(parser.urlencoded({ extended: true }));
 app.use(parser.json());
 app.use(morgan('combined'));
 
-app.use(express.static("public"));
+app.use(express.static(__dirname + "/public"));
 
 
 
@@ -56,14 +57,16 @@ require("./routes/html-routes.js")(app);
 require("./routes/api-routes.js")(app);
 
 
-
-app.listen(PORT, function(){
-  console.log("Get yourself connected on port: "+ PORT);
+db.sequelize.sync().then(function(){
+    app.listen(PORT, function(){
+        console.log("Get yourself connected on port: "+ PORT);
+      })
 })
+
 
 const mailjet = require ('node-mailjet')
     .connect(keys.mailjet.publicID, keys.mailjet.secretID)
-    console.log(keys.mailjet.publicID, keys.mailjet.secretID)
+    // console.log(keys.mailjet.publicID, keys.mailjet.secretID)
 moment().format();
  
 // Find your account sid and auth token in your Twilio account Console.
@@ -117,9 +120,9 @@ const request = mailjet
     })
 request
     .then((result) => {
-        console.log(result.body)
+        console.log("results: " + result.body)
     })
     .catch((err) => {
-        console.log(err.statusCode)
+        console.log("error: " + err.statusCode)
     })
 
