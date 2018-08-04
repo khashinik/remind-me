@@ -8,4 +8,7 @@ module.exports = function(app){
     app.get("/record", function(req, res){
         res.sendFile(path.join(__dirname,  "../public/record.html"));
     });
+    app.get("/public/record.html", function(req, res){
+        res.sendFile(path.join(__dirname,  "../public/record.html"));
+    });
 };

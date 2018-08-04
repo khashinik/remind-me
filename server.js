@@ -22,7 +22,7 @@ app.use(parser.urlencoded({ extended: true }));
 app.use(parser.json());
 app.use(morgan('combined'));
 
-app.use(express.static("public"));
+app.use(express.static(__dirname + "/public"));
 
 
 
