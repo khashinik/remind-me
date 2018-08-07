@@ -30,4 +30,32 @@ app.post('/api/userpresent', function(req, res){
   res.end();
 
 })
+
+app.post("/api/createreminder", function(req, res){
+  model.reminders.create(req.body).then(function(dbPost){
+    res.json(dbPost);
+  })
+})
+app.get("/api/reminders/:id?", function(req, res){
+  // model.reminders.findAll({
+  //   where: {
+  //     id: req.params.id
+  // })
+  // var query = {};
+  //   if (req.param.id) {
+  //     query.id = req.param.id;
+  //   }
+    // Here we add an "include" property to our options in our findAll query
+    // We set the value to an array of the models we want to include in a left outer join
+    // In this case, just db.Author
+    console.log("req: " + req.params.id);
+    model.reminders.findAll({
+      where: {
+        id: req.params.id
+      }
+    }).then(function(dbPost) {
+      res.json(dbPost);
+    });
+  });
 }
+

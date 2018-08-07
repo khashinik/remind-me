@@ -36,5 +36,12 @@ module.exports = function (sequelize, DataTypes){
             }
         }
     })
+    Users.associate = function(models){
+        Users.hasMany(models.reminders, {
+            onDelete: "cascade"
+        })
+    }
+
+
     return Users;
 }
