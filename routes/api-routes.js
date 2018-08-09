@@ -1,7 +1,13 @@
 var path = require("path");
-var model = require("../models")
+var model = require("../models");
+var twilio = require('twilio');
+var moment = require('moment');
+var keys = require('../keys.js');
+
+
 
 module.exports = function (app) {
+
 
 app.get('/auth/google/callback', function(req, res){
   console.log("Auth Callback");
@@ -35,6 +41,34 @@ app.post("/api/createreminder", function(req, res){
   model.reminders.create(req.body).then(function(dbPost){
     res.json(dbPost);
   })
+})
+
+app.post("/api/sendreminder", function(req, res){
+console.log("twi clien ID: " + keys.twilio.client_ID);
+var twilClient = new twilio(keys.twilio.client_ID, keys.twilio.clientSecret);
+
+  var timeA = moment(req.body.deliveryDate + ", " +req.body.deliveryTime);
+  console.log("delivery Time: " + req.body.deliveryTime);
+var tmr = setInterval(()=>{
+  var now = moment().unix();
+  var then = timeA.unix();
+  var phoneNum = "1" + req.body.userNumber;
+  var message = req.body.message;
+  console.log(now, then)
+  if (now == then) {
+    twilClient.messages.create({
+        to: phoneNum,
+        from: '16474902662',
+        body: message
+      }).then(message => console.log(message.sid))
+      .done();
+    
+      clearInterval(tmr);
+      console.log('Check your text fool!');      
+  }
+}, 1000);
+
+
 })
 app.get("/api/reminders/:userID", function(req, res){
   // model.reminders.findAll({
