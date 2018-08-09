@@ -1,0 +1,52 @@
+h1{
+    text-align: center;
+}
+
+body{
+    font-family: "Times New Roman", Times, serif;
+    color: rgb(244, 245, 241);
+    font-size: 30px;
+    background-image: url("images/clock.jpg");
+    background-color: rgb(175, 245, 191);
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+}
+
+.container{
+    background-color: rgb(246, 249, 252);
+    border-color: black;
+    height: 220px;
+}
+
+/**/
+
+.form-group{
+    padding-right: 200px;
+    padding-left: 200px; 
+    }
+.input-group{
+    padding-left: 200px;
+    padding-right: 200px; 
+}
+
+button{
+    padding-left: 250px;
+} 
+
+
+
+iframe {
+    width: 100%;
+    border-width: 0px;
+}
+
+.parent {
+    position: relative;
+}
+
+.collapsible li.active span {
+    -ms-transform: rotate(180deg); /* IE 9 */
+    -webkit-transform: rotate(180deg); /* Chrome, Safari, Opera */
+    transform: rotate(180deg);
+  }
