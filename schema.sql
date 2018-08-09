@@ -1,0 +1,3 @@
+DROP DATABASE IF EXISTS remind_me;
+
+CREATE DATABASE remind_me;

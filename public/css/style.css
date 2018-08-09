@@ -1,0 +1,67 @@
+h1{
+    text-align: center;
+    font-size: 60px;
+}
+#jumbo{
+    background-color: #2edfd9;
+}
+
+body{
+    font-family: "Times New Roman", Times, serif;
+    color: white;
+    background-image: url("images/clock.jpg");
+    background-color: rgb(187, 240, 199);
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+}
+
+p{
+    font-size: 25px;
+    color: maroon;
+    text-align: center;
+    font-display: bold;
+}
+
+.form-group{
+    padding-right: 200px;
+    padding-left: 200px; 
+}
+
+button{
+        text-align: center;
+        background-color: rgb(230, 204, 204); 
+        color: rgb(189, 8, 24); 
+        border: 20px solid rgb(164, 168, 170);
+        padding-left: 300px;
+        padding-right: 300px;
+    }
+
+.btn-btn-primary{
+        text-align: center;
+        background-color: rgb(230, 204, 204); 
+        color: rgb(189, 8, 24); 
+        border: 20px solid rgb(164, 168, 170);
+        padding-left: 300px;
+        padding-right: 300px;
+}
+    
+#button:hover{
+        background-color: rgb(138, 198, 255);
+        color: white;
+    }
+
+iframe {
+    width: 100%;
+    border-width: 0px;
+}
+
+.parent {
+    position: relative;
+}
+
+.collapsible li.active span {
+    -ms-transform: rotate(180deg); /* IE 9 */
+    -webkit-transform: rotate(180deg); /* Chrome, Safari, Opera */
+    transform: rotate(180deg);
+  }

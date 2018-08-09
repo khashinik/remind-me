@@ -1,0 +1,17 @@
+{
+    "azp": "747948799450-ebtaufpqbjd3hl7lqpfdq9p792m7cbuc.apps.googleusercontent.com",
+    "aud": "747948799450-ebtaufpqbjd3hl7lqpfdq9p792m7cbuc.apps.googleusercontent.com",
+    "sub": "110840831066564335958",
+    "email": "rudenik@gmail.com",
+    "email_verified": true,
+    "at_hash": "IzOu5HadofhEVs2eZ3OaXg",
+    "exp": 1533087062,
+    "iss": "accounts.google.com",
+    "jti": "d91f06ac4b5969347cd0c75ccc84dd145a97bfe7",
+    "iat": 1533083462,
+    "name": "Simon Cain",
+    "picture": "https://lh5.googleusercontent.com/-Uv0Q_Tvg180/AAAAAAAAAAI/AAAAAAAAAK0/erUq-2L6wKY/s96-c/photo.jpg",
+    "given_name": "Simon",
+    "family_name": "Cain",
+    "locale": "en"
+}
