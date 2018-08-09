@@ -1,4 +1,4 @@
-var googleUser = {}
+var googleUser = {};
 
 function onSuccess(googleUser) {
     var profile = googleUser.getBasicProfile();
@@ -21,7 +21,7 @@ function onSuccess(googleUser) {
         uName: profile.getName(),
         email: profile.getEmail(),
         photo: profile.getImageUrl()
-    }
+    };
 
     $.ajax({
         url: "/api/userpresent",
@@ -34,14 +34,14 @@ function onSuccess(googleUser) {
                 url: "/record",
                 method: "get",
                 success: function(response){
-                    window.location.href = "/record"
+                    window.location.href = "/record";
                     sessionStorage['cUser'] = JSON.stringify(currentUser);
                     $("body").html(response);
                 },
                 error: function(err){
                     console.log(err);
                 }
-            })
+            });
             // .then(function (data) {
             //     console.log(data);
             //     // })
@@ -49,7 +49,7 @@ function onSuccess(googleUser) {
             //     window.location.assign = "/public/record.html"
             //     sessionStorage['cUser'] = JSON.stringify(currentUser);
 
-            })
+            });
 
     }
     
