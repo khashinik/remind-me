@@ -1,6 +1,6 @@
 h1{
     text-align: center;
-    font-size: 50px;
+    font-size: 60px;
 }
 #jumbo{
     background-color: #2edfd9;
@@ -16,12 +16,18 @@ body{
     text-align: center;
 }
 
+p{
+    font-size: 25px;
+    text-align: center;
+    font-display: bold;
+}
+
 .form-group{
     padding-right: 200px;
     padding-left: 200px; 
 }
 
-.button{
+button{
         text-align: center;
         background-color: rgb(230, 204, 204); 
         color: rgb(189, 8, 24); 
