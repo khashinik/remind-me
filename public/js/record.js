@@ -7,7 +7,7 @@ picture.attr("src", currentUser.photo);
 // var name = $("<div>").text(currentUser.uName);
 // name.text(" " + currentUser.uName);
 
-$("#inputEmail1").val(currentUser.email)
+$("#inputEmail1").val(currentUser.email);
 
 $("#userinfo").append(picture);
 // $("#userinfo").append(name);
@@ -36,7 +36,7 @@ $.ajax({
     }
 
 
-})
+});
 
 
 $("#subbutt").on("click", function(e){
@@ -58,5 +58,5 @@ $("#subbutt").on("click", function(e){
         url: "/api/createreminder"
     }).then(function(response){
         console.log("response: " + JSON.stringify(response));
-    })
-})
+    });
+});

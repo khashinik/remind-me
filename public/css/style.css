@@ -1,5 +1,6 @@
 h1{
     text-align: center;
+    font-size: 50px;
 }
 #jumbo{
     background-color: #2edfd9;
@@ -8,7 +9,7 @@ h1{
 body{
     font-family: "Times New Roman", Times, serif;
     color: white;
-    background-image: url("images/alarms.jpg");
+    background-image: url("images/clock.jpg");
     background-color: rgb(187, 240, 199);
     background-repeat: no-repeat;
     background-size: cover;
@@ -25,9 +26,18 @@ body{
         background-color: rgb(230, 204, 204); 
         color: rgb(189, 8, 24); 
         border: 20px solid rgb(164, 168, 170);
-        padding-left: 100px;
-        padding-right: 100px;
+        padding-left: 300px;
+        padding-right: 300px;
     }
+
+.btn-btn-primary{
+        text-align: center;
+        background-color: rgb(230, 204, 204); 
+        color: rgb(189, 8, 24); 
+        border: 20px solid rgb(164, 168, 170);
+        padding-left: 300px;
+        padding-right: 300px;
+}
     
 #button:hover{
         background-color: rgb(138, 198, 255);
