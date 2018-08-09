@@ -48,7 +48,8 @@ $("#subbutt").on("click", function(e){
         message: $("#remindermesage").val(),
         deliveryMethod: 1,
         userName: currentUser.uName,
-        userID: currentUser.id
+        userID: currentUser.id,
+        userNumber: $("#Inputphonenumber").val()
     
     };
     console.log("reminderToSave: " + JSON.stringify(newReminder));
@@ -59,4 +60,11 @@ $("#subbutt").on("click", function(e){
     }).then(function(response){
         console.log("response: " + JSON.stringify(response));
     });
+    $.ajax({
+        method: "post",
+        data: newReminder,
+        url: "/api/sendreminder"
+    }).then(function(res){
+        console.log("send response: " + JSON.stringify(res));
+    })
 });
